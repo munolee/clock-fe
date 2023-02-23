@@ -33,6 +33,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@testing-library/react", "virtual:e74161e9cdd6811d59e22efa318af148548b04e40440a5e8e463abe8f63bac135f893454bbb25c384424a4b1ab9b2ab379d8b822ff1c08a13c885d72fa4483cc#npm:13.4.0"],\
             ["@testing-library/user-event", "virtual:e74161e9cdd6811d59e22efa318af148548b04e40440a5e8e463abe8f63bac135f893454bbb25c384424a4b1ab9b2ab379d8b822ff1c08a13c885d72fa4483cc#npm:13.5.0"],\
             ["@types/jest", "npm:27.5.2"],\
+            ["@types/lodash", "npm:4.14.191"],\
             ["@types/node", "npm:16.18.12"],\
             ["@types/react", "npm:18.0.28"],\
             ["@types/react-dom", "npm:18.0.11"],\
@@ -40,6 +41,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-config-react-app", "virtual:e74161e9cdd6811d59e22efa318af148548b04e40440a5e8e463abe8f63bac135f893454bbb25c384424a4b1ab9b2ab379d8b822ff1c08a13c885d72fa4483cc#npm:6.0.0"],\
             ["husky", "npm:8.0.3"],\
             ["lint-staged", "npm:13.1.2"],\
+            ["lodash", "npm:4.17.21"],\
             ["prettier", "npm:2.8.4"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:e74161e9cdd6811d59e22efa318af148548b04e40440a5e8e463abe8f63bac135f893454bbb25c384424a4b1ab9b2ab379d8b822ff1c08a13c885d72fa4483cc#npm:18.2.0"],\
@@ -4587,6 +4589,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@types/lodash", [\
+        ["npm:4.14.191", {\
+          "packageLocation": "./.yarn/cache/@types-lodash-npm-4.14.191-67a04a969b-ba0d5434e1.zip/node_modules/@types/lodash/",\
+          "packageDependencies": [\
+            ["@types/lodash", "npm:4.14.191"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@types/mime", [\
         ["npm:3.0.1", {\
           "packageLocation": "./.yarn/cache/@types-mime-npm-3.0.1-dec03536dc-4040fac73f.zip/node_modules/@types/mime/",\
@@ -6724,6 +6735,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@testing-library/react", "virtual:e74161e9cdd6811d59e22efa318af148548b04e40440a5e8e463abe8f63bac135f893454bbb25c384424a4b1ab9b2ab379d8b822ff1c08a13c885d72fa4483cc#npm:13.4.0"],\
             ["@testing-library/user-event", "virtual:e74161e9cdd6811d59e22efa318af148548b04e40440a5e8e463abe8f63bac135f893454bbb25c384424a4b1ab9b2ab379d8b822ff1c08a13c885d72fa4483cc#npm:13.5.0"],\
             ["@types/jest", "npm:27.5.2"],\
+            ["@types/lodash", "npm:4.14.191"],\
             ["@types/node", "npm:16.18.12"],\
             ["@types/react", "npm:18.0.28"],\
             ["@types/react-dom", "npm:18.0.11"],\
@@ -6731,6 +6743,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-config-react-app", "virtual:e74161e9cdd6811d59e22efa318af148548b04e40440a5e8e463abe8f63bac135f893454bbb25c384424a4b1ab9b2ab379d8b822ff1c08a13c885d72fa4483cc#npm:6.0.0"],\
             ["husky", "npm:8.0.3"],\
             ["lint-staged", "npm:13.1.2"],\
+            ["lodash", "npm:4.17.21"],\
             ["prettier", "npm:2.8.4"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:e74161e9cdd6811d59e22efa318af148548b04e40440a5e8e463abe8f63bac135f893454bbb25c384424a4b1ab9b2ab379d8b822ff1c08a13c885d72fa4483cc#npm:18.2.0"],\

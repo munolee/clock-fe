@@ -1,8 +1,8 @@
 export const ClockSize = {
-  CLOCK: 800,
-  HOUR_HAND: 660,
-  MINUTE_HAND: 780,
-  SECOND_HAND: 780,
+  CLOCK: 600,
+  HOUR_HAND: 460,
+  MINUTE_HAND: 580,
+  SECOND_HAND: 580,
 };
 
 export const ClockHandColor = {

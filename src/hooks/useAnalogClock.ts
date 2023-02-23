@@ -6,15 +6,12 @@ type UseAnalogClockType = {
   secondDegree: Degree;
   minuteDegree: Degree;
   hourDegree: Degree;
+  tooltipText: string;
 };
 
 const useAnalogClock = (): UseAnalogClockType => {
   const koreaTime = useRecoilValue(koreaTimeState);
-  const [hours, minutes, seconds] = [
-    koreaTime.getHours() % 12,
-    koreaTime.getMinutes(),
-    koreaTime.getSeconds(),
-  ];
+  const [hours, minutes, seconds] = [koreaTime.getHours() % 12, koreaTime.getMinutes(), koreaTime.getSeconds()];
 
   const secondDegree = seconds * 6;
   const minuteDegree = minutes * 6 + secondDegree / 60;
@@ -24,6 +21,7 @@ const useAnalogClock = (): UseAnalogClockType => {
     secondDegree,
     minuteDegree,
     hourDegree,
+    tooltipText: `${hours}:${minutes}:${seconds}`,
   };
 };
 
