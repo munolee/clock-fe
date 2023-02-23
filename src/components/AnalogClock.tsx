@@ -1,9 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import { ClockSize, ClockHandColor } from '@constants/clock';
+import useTimeSet from '@hooks/useTimeSet';
 import useAnalogClock from '@hooks/useAnalogClock';
 
 const AnalogClock = () => {
+  useTimeSet();
   const { hourDegree, minuteDegree, secondDegree } = useAnalogClock();
 
   return (
