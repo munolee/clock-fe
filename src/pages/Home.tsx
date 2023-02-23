@@ -1,12 +1,12 @@
 import React from 'react';
-import styled from 'styled-components';
+import AnalogClock from '@components/AnalogClock';
 
 const Home = () => {
-  return <Container>template</Container>;
+  return (
+    <>
+      <AnalogClock />
+    </>
+  );
 };
 
 export default Home;
-
-const Container = styled.div`
-  display: flex;
-`;
