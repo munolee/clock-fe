@@ -1,7 +1,15 @@
-import useTimeSet from '@hooks/useTimeSet';
+import { koreaTimeState } from '@store/koreaTime';
+import { useRecoilValue } from 'recoil';
 
-const useAnalogClock = () => {
-  const { koreaTime } = useTimeSet();
+type Degree = number;
+type UseAnalogClockType = {
+  secondDegree: Degree;
+  minuteDegree: Degree;
+  hourDegree: Degree;
+};
+
+const useAnalogClock = (): UseAnalogClockType => {
+  const koreaTime = useRecoilValue(koreaTimeState);
   const [hours, minutes, seconds] = [
     koreaTime.getHours() % 12,
     koreaTime.getMinutes(),

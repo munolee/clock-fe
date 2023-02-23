@@ -1,7 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
+import { useSetRecoilState } from 'recoil';
+import { koreaTimeState } from '@store/koreaTime';
 
 const useTimeSet = () => {
-  const [koreaTime, setKoreaTime] = useState<Date>(new Date());
+  const setKoreaTime = useSetRecoilState(koreaTimeState);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -11,10 +13,6 @@ const useTimeSet = () => {
 
     return () => clearInterval(intervalId);
   }, [setKoreaTime]);
-
-  return {
-    koreaTime,
-  };
 };
 
 export default useTimeSet;
