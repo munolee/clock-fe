@@ -1,30 +1,28 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ClockSize, ClockHandColor } from '@constants/clock';
 import useTimeSet from '@hooks/useTimeSet';
 import useAnalogClock from '@hooks/useAnalogClock';
+import useToolTip from '@hooks/useToolTip';
+import { ClockSize, ClockHandColor } from '@constants/clock';
+import ClockToolTip from '@components/ClockToolTip';
 
 const AnalogClock = () => {
   useTimeSet();
-  const { hourDegree, minuteDegree, secondDegree } = useAnalogClock();
+  const { hourDegree, minuteDegree, secondDegree, tooltipText } = useAnalogClock();
+  const { showToolTip, hideToolTip } = useToolTip();
 
   return (
-    <Clock size={ClockSize.CLOCK}>
-      <Hand
-        degree={hourDegree}
-        size={ClockSize.HOUR_HAND}
-        color={ClockHandColor.HOUR_HAND_COLOR}
-      />
-      <Hand
-        degree={minuteDegree}
-        size={ClockSize.MINUTE_HAND}
-        color={ClockHandColor.MINUTE_HAND_COLOR}
-      />
-      <Hand
-        degree={secondDegree}
-        size={ClockSize.SECOND_HAND}
-        color={ClockHandColor.SECOND_HAND_COLOR}
-      />
+    <Clock
+      size={ClockSize.CLOCK}
+      onMouseMove={(e) => {
+        showToolTip({ positionX: e.clientX, positionY: e.clientY });
+      }}
+      onMouseLeave={hideToolTip}
+    >
+      <Hand degree={hourDegree} size={ClockSize.HOUR_HAND} color={ClockHandColor.HOUR_HAND_COLOR} />
+      <Hand degree={minuteDegree} size={ClockSize.MINUTE_HAND} color={ClockHandColor.MINUTE_HAND_COLOR} />
+      <Hand degree={secondDegree} size={ClockSize.SECOND_HAND} color={ClockHandColor.SECOND_HAND_COLOR} />
+      <ClockToolTip tooltipText={tooltipText} />
     </Clock>
   );
 };
