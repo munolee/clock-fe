@@ -1,28 +1,19 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+.idea
+.idea/*.xml
+*.iml
 
-# dependencies
+.DS_Store
 /node_modules
 /.pnp
 .pnp.js
 
-# testing
-/coverage
-
-# production
+.vercel
 /build
-
-# misc
-.DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env
 
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# webstorm
-.idea
-.idea/*.xml
-*.iml
+yarn.lock
+package-lock.json
